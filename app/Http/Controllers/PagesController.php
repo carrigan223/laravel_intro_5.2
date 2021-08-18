@@ -11,4 +11,9 @@ class PagesController extends Controller
 
         return view('welcome', compact('people'));
     }
+
+    public function about()
+    {
+        return view('pages.about');//dot notation to find subdirectory{can also use slash}
+    }
 }
