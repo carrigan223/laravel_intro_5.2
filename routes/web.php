@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
 
-    $people = ['Andrew', 'Chelsea', 'Nacho'];
 
-    return view('welcome', compact('people'));
-});
+// Route::get('about', function () {
+//     return view('pages.about');//dot notation to find subdirectory{can also use slash}
+// });
 
-Route::get('about', function () {
-    return view('pages.about');//dot notation to find subdirectory{can also use slash}
-});
+Route::get('/', [PagesController::class, 'home']);
