@@ -20,11 +20,16 @@
     </head>
 
     <body>
-        <?php foreach ($people as $person) : ?>
 
-        <li><?=$person ?></li>
+        @unless (empty($people))
+        There Are No People
+        @else
+        These are the People
+        @endunless
 
-        <?php endforeach; ?>
+        @foreach ($people as $person)
+        <li>{{ $person }}</li>
+        @endforeach
     </body>
 
 </html>
