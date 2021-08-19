@@ -16,3 +16,8 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
     }
 }
+
+// DB::table('cards')->insert(['title' => 'My First Card', 'created_at' => new DateTime, 'updated_at' => new DateTime]);
+// DB::table('cards')->insert(['title' => 'My Second Card', 'created_at' => new DateTime, 'updated_at' => new DateTime]);
+
+// DB::table('cards')->where('title', 'My New Card')->delete();
